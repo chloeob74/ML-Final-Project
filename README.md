@@ -75,19 +75,19 @@ Methods used include **Linear Regression**, **Ridge** / **Lasso**, **KNN**, **K-
 
 ### Raw (Data/raw/)
 Two source datasets are used (see `datasources.md`):
-- **CDC mortality** (`data-table.csv`) — firearm death rates / deaths by state-year
-- **RAND State Firearm Law Database** (`TL-A243-2-v3 State Firearm Law Database 5.0.xlsx`) — law changes by state with `effect`, `type_of_change`, and `effective_date_year`
+- [CDC mortality](https://www.cdc.gov/nchs/state-stats/deaths/firearms.html) (`data-table.csv`) — firearm death rates / deaths by state-year
+- [RAND State Firearm Database](https://www.rand.org/pubs/tools/TLA243-2-v3.html) (`TL-A243-2-v3 State Firearm Law Database 5.0.xlsx`) — law changes by state with `effect`, `type_of_change`, and `effective_date_year`
 
 ### Processed (Data/processed/)
-- `firearm_data_cleaned.csv` — merged, cleaned, analysis-ready dataset loaded by the dashboard fileciteturn1file0  
+- `firearm_data_cleaned.csv` — merged, cleaned, analysis-ready dataset loaded by the dashboard
 
 ---
 
-## Law strength scoring (high level)
+## Law strength scoring
 
 Each law change is mapped to **+1 / -1** and then **cumulatively summed** by state-year to represent the policy environment.
 
-Scoring rules: fileciteturn1file1
+Scoring rules:
 - Restrictive **Implement/Modify** → **+1**
 - Permissive **Implement/Modify** → **-1**
 - Repeal of a restrictive law → **-1**
@@ -133,7 +133,7 @@ jupyter notebook
 - Ryan Dallas  
 - Terry Luedtke  
 - Shiraz Robinson  
-- Tiandre Threat fileciteturn1file2
+- Tiandra Threat
 
 ---
 
