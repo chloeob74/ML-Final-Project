@@ -296,15 +296,15 @@ def show_the_graph_and_table(mod_choice, data_choice):
     if(data_choice == 'Dataset 1'):
         if mod_choice == 'PCA':
             data = pd.read_csv('pca_output_data1.csv')
-            adj_r2 = '-1.481'
-            rmse = '4.652'
+            adj_r2 = '-1.234'
+            rmse = '4.602'
         elif mod_choice == 'Ridge Regression':
             data = pd.read_csv('ridge_output_data1.csv')
             adj_r2 = '0.938'
             rmse = '1.280'
         else: # mod_choice = Basic Multi-Linear Regression
             data = pd.read_csv('basic_output_data1.csv')    
-            adj_r2 = '0.946'
+            adj_r2 = '0.948'
             rmse = '1.277'
     
     else: # data_choice = 'Dataset 2'
@@ -319,7 +319,7 @@ def show_the_graph_and_table(mod_choice, data_choice):
         else: # mod_choice = Basic Multi-Linear Regression
             data = pd.read_csv('basic_output_data2.csv') 
             adj_r2 = '0.904'
-            rmse = '1.597'
+            rmse = '1.598'
 
     df = pd.DataFrame({'Adjusted r^2': [adj_r2], 'RMSE': [rmse]})
     #df_1 = df.T.reset_index()
@@ -347,9 +347,9 @@ style_center_image={'width':'80%', 'margin-left':'auto', 'margin-right':'auto', 
 tab_clusters = dcc.Tab(
     label = 'State Clusters',
     children = [
-        html.Img(src=app.get_asset_url('kmeans_elbow.png'), style=style_center_image),
-        html.Img(src=app.get_asset_url('ward_dendrogram.png'), style=style_center_image),
-        html.Img(src=app.get_asset_url('pca_clusters.png'), style=style_center_image)
+        html.Img(src=dash.get_asset_url('kmeans_elbow.png'), style=style_center_image),
+        html.Img(src=dash.get_asset_url('ward_dendrogram.png'), style=style_center_image),
+        html.Img(src=dash.get_asset_url('pca_clusters.png'), style=style_center_image)
         ]
 ) # End of tab_clusters
 
